@@ -1,13 +1,30 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+.bg-body-tertiary {
+  .navbar-nav > li {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+.nav-links {
+  display: inline-block;
+  height: 20px;
+  background-color: white; /*will change background-color of element */
+  color: green; /*will change color of text within the element */
+}
+
+.nav-links:hover {
+  background-color: green; /*will change background-color of element on hover */
+  color: white; /*will change color of text within the element on hover */
 }
