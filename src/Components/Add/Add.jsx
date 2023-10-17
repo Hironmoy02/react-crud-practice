@@ -10,7 +10,14 @@ e.preventDefault();
 
 setStudents(currentStudent=>[...currentStudent,name]);
 setName("");
-    }
+ }
+
+const handleDelete=(deleteStudent)=>{
+const newStudents=students.filter((student)=>student!==deleteStudent)
+setStudents(newStudents)
+}
+
+
   return (
     <>
       {/* <InputGroup size="sm" className="mb-3">
@@ -54,7 +61,7 @@ setName("");
 <h1>Student's list</h1>
 <ul>
 {
-students.map((student,index)=><li key={index}>{student}</li>)
+students.map((student,index)=><li key={index}>{student} <button onClick={()=>handleDelete(student)}>Delete</button> </li>)
 }
 
 </ul>
