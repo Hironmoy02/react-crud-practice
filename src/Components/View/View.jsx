@@ -5,7 +5,7 @@ function View() {
   return (
 <>
 
-<Add/>
+<h1>Made by hironmoy with hate</h1>
 
 </>
   )

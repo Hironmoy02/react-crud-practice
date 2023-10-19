@@ -9,6 +9,7 @@ import { Route, RouterProvider, createBrowserRouter, createRoutesFromElements } 
 import Home from './Components/Home/Home'
 import Add from './Components/Add/Add'
 import Layout from './Components/Layout'
+import View from './Components/View/View'
 
 // const router = createBrowserRouter([
 //   {
@@ -36,6 +37,7 @@ const router = createBrowserRouter(
     <Route path='/' element={<Layout />}>
       <Route path='' element={<Home />} />
       <Route path='add' element={<Add />} />
+      <Route path='view' element={<View />} />
       {/* <Route path='about' element={<About />} />
       <Route path='contact' element={<Contact />} />
       <Route path='user/:userid' element={<User />} />

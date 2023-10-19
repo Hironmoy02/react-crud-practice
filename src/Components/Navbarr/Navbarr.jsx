@@ -1,3 +1,4 @@
+import { useState } from "react";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
@@ -5,7 +6,19 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { NavLink } from "react-router-dom";
 
 function Navbarr() {
-  const isActive = true; // Placeholder value, replace it with your logic.
+  const [isActive,setIsactive]=useState({
+    add:false,
+    view:false,
+    home:false
+  });
+  const handleClick=(navItem)=>{
+   setIsactive({
+    add:false,
+    view: false,
+    home: false,
+    [navItem]: true
+   })
+  }
 
   return (
     <Navbar expand="lg" className="bg-body-tertiary">
@@ -15,23 +28,26 @@ function Navbarr() {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
             <Nav.Link
-              className={isActive ? "text-success" : "text-dark"}
+              className={isActive.add ? "text-success" : "text-dark"}
               as={NavLink}
               to="/add"
+              onClick={()=>handleClick("add")}
             >
               ADD
             </Nav.Link>
             <Nav.Link
-              className={isActive ? "text-success" : "text-dark"}
+              className={isActive.view ? "text-success" : "text-dark"}
               as={NavLink}
               to="/view"
+              onClick={()=>handleClick("view")}
             >
               VIEW
             </Nav.Link>
             <Nav.Link
-              className={isActive ? "text-success" : "text-dark"}
+              className={isActive.home ? "text-success" : "text-dark"}
               as={NavLink}
               to="/"
+              onClick={()=>handleClick("home")}
             >
               HOME
             </Nav.Link>
